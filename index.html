@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Master</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- header section  -->
     <header>
       <h1 class="text-5xl font-bold text-indigo-800 text-center my-7">
-        Monthly Expences
+        Monthly Expences & Savings
       </h1>
     </header>
     <main>
@@ -41,6 +42,12 @@
               <p class="inline">Clothes:</p>
               <input id="cloth-input" type="text" class="bg-gray-300" />
             </div>
+
+            <!-- error message  -->
+            <h3 id="typed-string" class="font-semibold text-red-600">You should write a number</h3>
+            <h3 id="typed-negetive" class="font-semibold text-red-600">You should write a positive number</h3>
+            <!-- error message  -->
+
             <button id="calc-btn" class="w-1/5 p-2 bg-cyan-400 text-white font-bold my-2">
               Calculate
             </button>
