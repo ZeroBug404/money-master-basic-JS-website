@@ -13,21 +13,23 @@ document.getElementById("calc-btn").addEventListener("click", function () {
   const incomeInput = document.getElementById("income-input").value;
   const incomeAmount = parseInt(incomeInput);
   const balance = incomeAmount - totalCost;
-  
-    // get wrong typing error
+
+  // get wrong typing error
   const typedString = document.getElementById("typed-string");
   const typedNegative = document.getElementById("typed-negetive");
   if (isNaN(totalCost) || isNaN(balance)) {
-    
     typedString.style.display = "block";
     typedNegative.style.display = "none";
-  } 
-  else if(foodCost < 0 || rentCost < 0 || clothCost < 0 || incomeAmount < 0) {
+  } else if (
+    foodCost < 0 ||
+    rentCost < 0 ||
+    clothCost < 0 ||
+    incomeAmount < 0
+  ) {
     typedNegative.style.display = "block";
     typedString.style.display = "none";
-  }
-  else {
-      //   update total expences
+  } else {
+    //   update total expences
     const totalExpence = document.getElementById("total-expence");
     totalExpence.innerText = totalCost;
 
@@ -35,5 +37,16 @@ document.getElementById("calc-btn").addEventListener("click", function () {
     const totalBalance = document.getElementById("total-balance");
     totalBalance.innerText = balance;
   }
-  
+});
+
+document.getElementById("save-btn").addEventListener("click", function () {
+  const inputPercentege = document.getElementById("input-percentege").value;
+  const incomeInput = document.getElementById("income-input").value;
+  const savingAmountNumber = document.getElementById('saving-amount');
+  const percentegeNumber = parseInt(inputPercentege);
+  const incomeAmount = parseInt(incomeInput);
+
+  const saveAmountTotal = incomeAmount / percentegeNumber;
+
+  savingAmountNumber.innerText = saveAmountTotal;
 });
