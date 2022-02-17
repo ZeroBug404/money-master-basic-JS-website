@@ -19,11 +19,9 @@ document.getElementById("calc-btn").addEventListener("click", function () {
 
   const balance = getIncomeAmount() - totalCost;
 
-  // total expence & balance 
+  // total expence & balance
   const totalExpence = document.getElementById("total-expence");
   const totalBalance = document.getElementById("total-balance");
-
-  
 
   // get wrong typing error
   const typedString = document.getElementById("typed-string");
@@ -39,21 +37,22 @@ document.getElementById("calc-btn").addEventListener("click", function () {
   ) {
     typedNegative.style.display = "block";
     typedString.style.display = "none";
-  } else {  
-      //   update total expences
+  } else {
+    //   update total expences
     totalExpence.innerText = totalCost;
-    
+
     // update balance
     totalBalance.innerText = balance;
-    
-  };
+  }
 
-  // another error message 
-  // const exceedIncome = document.getElementById("exceed-income");
-  // if (totalBalance < 0) {
-  //   // console.log(exceedIncome);
-  //   exceedIncome.style.display = "block";
-  // }
+  // error message for total expence exceeds
+  const exceedIncome = document.getElementById("exceed-income");
+  if (balance < 0) {
+    exceedIncome.style.display = "block";
+  }
+  else {
+    console.log('Not working');
+  }
   
 });
 
