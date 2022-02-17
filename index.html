@@ -34,7 +34,7 @@
               <p class="inline mr-4">Food:</p>
               <input id="food-input" type="text" class="bg-gray-300" />
             </div>
-            <div>
+            <div class="my-5">
               <p class="inline mr-5">Rent:</p>
               <input id="rent-input" type="text" class="bg-gray-300" />
             </div>
@@ -45,17 +45,21 @@
 
             <!-- error message  -->
             <h3 id="typed-string" class="font-semibold text-red-600">You should write a number</h3>
-            <h3 id="typed-negetive" class="font-semibold text-red-600">You should write a positive number</h3>
+            <h3 id="typed-negetive" class="font-semibold text-red-600">You can't use a negative number</h3>
             <!-- error message  -->
 
-            <button id="calc-btn" class="w-1/5 p-2 bg-cyan-400 text-white font-bold my-2">
+            <button id="calc-btn" class="w-2/5 p-2 bg-cyan-400 text-white font-bold my-2">
               Calculate
             </button>
             <h3 class="font-semibold my-2">
               Total Expences: <span id="total-expence">0</span>
             </h3>
-            <h3 class="font-semibold">Balance: <span id="total-balance">0</span></h3>
+            <!-- error message  -->
+            <h3 id="exceed-income" class="font-semibold text-red-600">You already exceeded your income!</h3>
+            <!-- error message  -->
 
+            <h3 class="font-semibold">Balance: <span id="total-balance">0</span></h3>
+            
             <!-- save percentage -->
             <div class="mt-3">
               <p>Save:</p>
@@ -65,6 +69,10 @@
               </button>
             </div>
             <h3 class="font-semibold my-2">Saving Amount: <span id="saving-amount">0</span></h3>
+            <!-- error message  -->
+            <h3 id="over-balanced" class="font-semibold text-red-600">You don't have enough balance to save!</h3>
+            <!-- error message  -->
+
             <h3 class="font-semibold">Remaining Balance: <span id="remaining-balance">0</span></h3>
           </div>
         </div>

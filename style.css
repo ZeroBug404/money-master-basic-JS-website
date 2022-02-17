@@ -1,6 +1,13 @@
+/* To hide error message */
 #typed-string{
     display: none;
 }
 #typed-negetive{
+    display: none;
+}
+#over-balanced{
+    display: none;
+}
+#exceed-income{
     display: none;
 }
